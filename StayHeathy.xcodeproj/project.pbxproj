@@ -1,0 +1,990 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2301F4871C5828170028F673 /* FirstRegistrationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2301F4861C5828170028F673 /* FirstRegistrationScreen.swift */; };
+		2301F48B1C5841C80028F673 /* MenuScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2301F48A1C5841C80028F673 /* MenuScreen.swift */; };
+		2301F4911C594F6E0028F673 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2301F4901C594F6E0028F673 /* Person.swift */; };
+		23383CDD1C53DBBD00A069CC /* abdominal_aortic_aneurysm.png in Resources */ = {isa = PBXBuildFile; fileRef = 23383C721C53DBBD00A069CC /* abdominal_aortic_aneurysm.png */; };
+		23383CDE1C53DBBD00A069CC /* about.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23383C731C53DBBD00A069CC /* about.jpg */; };
+		23383CDF1C53DBBD00A069CC /* aids.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23383C741C53DBBD00A069CC /* aids.jpg */; };
+		23383CE01C53DBBD00A069CC /* akg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23383C751C53DBBD00A069CC /* akg.jpg */; };
+		23383CE21C53DBBD00A069CC /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 23383C771C53DBBD00A069CC /* bg.png */; };
+		23383CE41C53DBBD00A069CC /* blood_pressure.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23383C791C53DBBD00A069CC /* blood_pressure.jpg */; };
+		23383CE51C53DBBD00A069CC /* bmi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23383C7A1C53DBBD00A069CC /* bmi.jpg */; };
+		23383CE61C53DBBD00A069CC /* bone_density_testing.png in Resources */ = {isa = PBXBuildFile; fileRef = 23383C7B1C53DBBD00A069CC /* bone_density_testing.png */; };
+		23383CE71C53DBBD00A069CC /* brain_work_easy_work.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23383C7C1C53DBBD00A069CC /* brain_work_easy_work.jpg */; };
+		23383CE81C53DBBD00A069CC /* brca.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23383C7D1C53DBBD00A069CC /* brca.jpg */; };
+		23383CE91C53DBBD00A069CC /* breast_self_examination.gif in Resources */ = {isa = PBXBuildFile; fileRef = 23383C7E1C53DBBD00A069CC /* breast_self_examination.gif */; };
+		23383CEA1C53DBBD00A069CC /* btn_blue_glossy.9.png in Resources */ = {isa = PBXBuildFile; fileRef = 23383C7F1C53DBBD00A069CC /* btn_blue_glossy.9.png */; };
+		23383CEB1C53DBBD00A069CC /* btn_lightblue_glossy.9.png in Resources */ = {isa = PBXBuildFile; fileRef = 23383C801C53DBBD00A069CC /* btn_lightblue_glossy.9.png */; };
+		23383CEC1C53DBBD00A069CC /* btn_white_glossy.9.png in Resources */ = {isa = PBXBuildFile; fileRef = 23383C811C53DBBD00A069CC /* btn_white_glossy.9.png */; };
+		23383CED1C53DBBD00A069CC /* btnlong.png in Resources */ = {isa = PBXBuildFile; fileRef = 23383C821C53DBBD00A069CC /* btnlong.png */; };
+		23383CEE1C53DBBD00A069CC /* btnshort.png in Resources */ = {isa = PBXBuildFile; fileRef = 23383C831C53DBBD00A069CC /* btnshort.png */; };
+		23383CEF1C53DBBD00A069CC /* catcancer.png in Resources */ = {isa = PBXBuildFile; fileRef = 23383C841C53DBBD00A069CC /* catcancer.png */; };
+		23383CF01C53DBBD00A069CC /* catgeneral.png in Resources */ = {isa = PBXBuildFile; fileRef = 23383C851C53DBBD00A069CC /* catgeneral.png */; };
+		23383CF11C53DBBD00A069CC /* catheart.png in Resources */ = {isa = PBXBuildFile; fileRef = 23383C861C53DBBD00A069CC /* catheart.png */; };
+		23383CF21C53DBBD00A069CC /* catmouth.png in Resources */ = {isa = PBXBuildFile; fileRef = 23383C871C53DBBD00A069CC /* catmouth.png */; };
+		23383CF31C53DBBD00A069CC /* catvaccine.png in Resources */ = {isa = PBXBuildFile; fileRef = 23383C881C53DBBD00A069CC /* catvaccine.png */; };
+		23383CF61C53DBBD00A069CC /* clalit_not_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 23383C8B1C53DBBD00A069CC /* clalit_not_selected.png */; };
+		23383CF71C53DBBD00A069CC /* clalit_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 23383C8C1C53DBBD00A069CC /* clalit_selected.png */; };
+		23383CF81C53DBBD00A069CC /* colonoscopy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23383C8D1C53DBBD00A069CC /* colonoscopy.jpg */; };
+		23383CF91C53DBBD00A069CC /* creatinine_level.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23383C8E1C53DBBD00A069CC /* creatinine_level.jpg */; };
+		23383CFA1C53DBBD00A069CC /* dermoscopy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23383C8F1C53DBBD00A069CC /* dermoscopy.jpg */; };
+		23383CFB1C53DBBD00A069CC /* diphtheria_and_tetanus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23383C901C53DBBD00A069CC /* diphtheria_and_tetanus.jpg */; };
+		23383CFC1C53DBBD00A069CC /* done.png in Resources */ = {isa = PBXBuildFile; fileRef = 23383C911C53DBBD00A069CC /* done.png */; };
+		23383CFD1C53DBBD00A069CC /* edittext_modified_states.xml in Resources */ = {isa = PBXBuildFile; fileRef = 23383C921C53DBBD00A069CC /* edittext_modified_states.xml */; };
+		23383CFE1C53DBBD00A069CC /* enlarged_liver_or_spleen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23383C931C53DBBD00A069CC /* enlarged_liver_or_spleen.jpg */; };
+		23383CFF1C53DBBD00A069CC /* eye.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23383C941C53DBBD00A069CC /* eye.jpg */; };
+		23383D001C53DBBD00A069CC /* femal_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 23383C951C53DBBD00A069CC /* femal_selected.png */; };
+		23383D011C53DBBD00A069CC /* femal_unselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 23383C961C53DBBD00A069CC /* femal_unselected.png */; };
+		23383D021C53DBBD00A069CC /* female.xml in Resources */ = {isa = PBXBuildFile; fileRef = 23383C971C53DBBD00A069CC /* female.xml */; };
+		23383D031C53DBBD00A069CC /* flu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23383C981C53DBBD00A069CC /* flu.jpg */; };
+		23383D041C53DBBD00A069CC /* frame.xml in Resources */ = {isa = PBXBuildFile; fileRef = 23383C991C53DBBD00A069CC /* frame.xml */; };
+		23383D051C53DBBD00A069CC /* glucose_test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23383C9A1C53DBBD00A069CC /* glucose_test.jpg */; };
+		23383D061C53DBBD00A069CC /* hearing.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23383C9B1C53DBBD00A069CC /* hearing.jpg */; };
+		23383D071C53DBBD00A069CC /* hepatitisa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23383C9C1C53DBBD00A069CC /* hepatitisa.jpg */; };
+		23383D081C53DBBD00A069CC /* hepatitisb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23383C9D1C53DBBD00A069CC /* hepatitisb.jpg */; };
+		23383D091C53DBBD00A069CC /* hereditary_cancer_genetic_testing.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23383C9E1C53DBBD00A069CC /* hereditary_cancer_genetic_testing.jpg */; };
+		23383D0A1C53DBBD00A069CC /* herpes_zoster.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23383C9F1C53DBBD00A069CC /* herpes_zoster.jpg */; };
+		23383D0B1C53DBBD00A069CC /* hpv_vaccine.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23383CA01C53DBBD00A069CC /* hpv_vaccine.jpg */; };
+		23383D0C1C53DBBD00A069CC /* hygienist.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23383CA11C53DBBD00A069CC /* hygienist.jpg */; };
+		23383D0D1C53DBBD00A069CC /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 23383CA21C53DBBD00A069CC /* icon.png */; };
+		23383D0E1C53DBBD00A069CC /* leumit.xml in Resources */ = {isa = PBXBuildFile; fileRef = 23383CA31C53DBBD00A069CC /* leumit.xml */; };
+		23383D0F1C53DBBD00A069CC /* lipid_profile.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23383CA41C53DBBD00A069CC /* lipid_profile.jpg */; };
+		23383D111C53DBBD00A069CC /* logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23383CA61C53DBBD00A069CC /* logo.jpg */; };
+		23383D121C53DBBD00A069CC /* lumit_not_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 23383CA71C53DBBD00A069CC /* lumit_not_selected.png */; };
+		23383D131C53DBBD00A069CC /* lumit_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 23383CA81C53DBBD00A069CC /* lumit_selected.png */; };
+		23383D141C53DBBD00A069CC /* lung_cancer.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23383CA91C53DBBD00A069CC /* lung_cancer.jpg */; };
+		23383D161C53DBBD00A069CC /* lymphatic_cancer_and_thyroid_prevention.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23383CAB1C53DBBD00A069CC /* lymphatic_cancer_and_thyroid_prevention.jpg */; };
+		23383D171C53DBBD00A069CC /* macbi.xml in Resources */ = {isa = PBXBuildFile; fileRef = 23383CAC1C53DBBD00A069CC /* macbi.xml */; };
+		23383D181C53DBBD00A069CC /* macbi_not_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 23383CAD1C53DBBD00A069CC /* macbi_not_selected.png */; };
+		23383D191C53DBBD00A069CC /* macbi_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 23383CAE1C53DBBD00A069CC /* macbi_selected.png */; };
+		23383D1A1C53DBBD00A069CC /* male.xml in Resources */ = {isa = PBXBuildFile; fileRef = 23383CAF1C53DBBD00A069CC /* male.xml */; };
+		23383D1B1C53DBBD00A069CC /* male_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 23383CB01C53DBBD00A069CC /* male_selected.png */; };
+		23383D1C1C53DBBD00A069CC /* male_unselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 23383CB11C53DBBD00A069CC /* male_unselected.png */; };
+		23383D1D1C53DBBD00A069CC /* mammography.png in Resources */ = {isa = PBXBuildFile; fileRef = 23383CB21C53DBBD00A069CC /* mammography.png */; };
+		23383D1E1C53DBBD00A069CC /* mehodet.xml in Resources */ = {isa = PBXBuildFile; fileRef = 23383CB31C53DBBD00A069CC /* mehodet.xml */; };
+		23383D1F1C53DBBD00A069CC /* mehodet_not_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 23383CB41C53DBBD00A069CC /* mehodet_not_selected.png */; };
+		23383D201C53DBBD00A069CC /* mehodet_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 23383CB51C53DBBD00A069CC /* mehodet_selected.png */; };
+		23383D211C53DBBD00A069CC /* meningococcal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23383CB61C53DBBD00A069CC /* meningococcal.jpg */; };
+		23383D221C53DBBD00A069CC /* not_smoke.xml in Resources */ = {isa = PBXBuildFile; fileRef = 23383CB71C53DBBD00A069CC /* not_smoke.xml */; };
+		23383D231C53DBBD00A069CC /* not_smoking_unselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 23383CB81C53DBBD00A069CC /* not_smoking_unselected.png */; };
+		23383D241C53DBBD00A069CC /* not_smpking_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 23383CB91C53DBBD00A069CC /* not_smpking_selected.png */; };
+		23383D251C53DBBD00A069CC /* oral_examination.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23383CBA1C53DBBD00A069CC /* oral_examination.jpg */; };
+		23383D261C53DBBD00A069CC /* orthodontic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23383CBB1C53DBBD00A069CC /* orthodontic.jpg */; };
+		23383D271C53DBBD00A069CC /* ovarian_cancer.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23383CBC1C53DBBD00A069CC /* ovarian_cancer.jpg */; };
+		23383D281C53DBBD00A069CC /* pap.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23383CBD1C53DBBD00A069CC /* pap.jpg */; };
+		23383D291C53DBBD00A069CC /* pertussis.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23383CBE1C53DBBD00A069CC /* pertussis.jpg */; };
+		23383D2A1C53DBBD00A069CC /* prostate.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23383CBF1C53DBBD00A069CC /* prostate.jpg */; };
+		23383D2B1C53DBBD00A069CC /* repeat_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 23383CC01C53DBBD00A069CC /* repeat_bg.png */; };
+		23383D2C1C53DBBD00A069CC /* routine_gynecological_health.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23383CC11C53DBBD00A069CC /* routine_gynecological_health.jpg */; };
+		23383D2D1C53DBBD00A069CC /* rubella.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23383CC21C53DBBD00A069CC /* rubella.jpg */; };
+		23383D2E1C53DBBD00A069CC /* save_your_salfe.png in Resources */ = {isa = PBXBuildFile; fileRef = 23383CC31C53DBBD00A069CC /* save_your_salfe.png */; };
+		23383D2F1C53DBBD00A069CC /* save_yourself.png in Resources */ = {isa = PBXBuildFile; fileRef = 23383CC41C53DBBD00A069CC /* save_yourself.png */; };
+		23383D301C53DBBD00A069CC /* sceen2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23383CC51C53DBBD00A069CC /* sceen2.jpg */; };
+		23383D311C53DBBD00A069CC /* screen1.png.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23383CC61C53DBBD00A069CC /* screen1.png.jpg */; };
+		23383D321C53DBBD00A069CC /* share2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23383CC71C53DBBD00A069CC /* share2.jpg */; };
+		23383D331C53DBBD00A069CC /* share3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23383CC81C53DBBD00A069CC /* share3.jpg */; };
+		23383D341C53DBBD00A069CC /* share_genral.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23383CC91C53DBBD00A069CC /* share_genral.jpg */; };
+		23383D351C53DBBD00A069CC /* sight.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23383CCA1C53DBBD00A069CC /* sight.jpg */; };
+		23383D371C53DBBD00A069CC /* smoke.xml in Resources */ = {isa = PBXBuildFile; fileRef = 23383CCC1C53DBBD00A069CC /* smoke.xml */; };
+		23383D381C53DBBD00A069CC /* smoking_not_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 23383CCD1C53DBBD00A069CC /* smoking_not_selected.png */; };
+		23383D391C53DBBD00A069CC /* smoking_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 23383CCE1C53DBBD00A069CC /* smoking_selected.png */; };
+		23383D3A1C53DBBD00A069CC /* streptococcus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23383CCF1C53DBBD00A069CC /* streptococcus.jpg */; };
+		23383D3B1C53DBBD00A069CC /* swipe_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 23383CD01C53DBBD00A069CC /* swipe_right.png */; };
+		23383D3C1C53DBBD00A069CC /* teeth.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23383CD11C53DBBD00A069CC /* teeth.jpg */; };
+		23383D3D1C53DBBD00A069CC /* test.xml in Resources */ = {isa = PBXBuildFile; fileRef = 23383CD21C53DBBD00A069CC /* test.xml */; };
+		23383D3E1C53DBBD00A069CC /* testicular_examination_by_physician.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23383CD31C53DBBD00A069CC /* testicular_examination_by_physician.jpg */; };
+		23383D3F1C53DBBD00A069CC /* testicular_self_examination.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23383CD41C53DBBD00A069CC /* testicular_self_examination.jpg */; };
+		23383D401C53DBBD00A069CC /* testing_for_breast_surgeon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23383CD51C53DBBD00A069CC /* testing_for_breast_surgeon.jpg */; };
+		23383D411C53DBBD00A069CC /* topbarbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 23383CD61C53DBBD00A069CC /* topbarbg.png */; };
+		23383D421C53DBBD00A069CC /* topbarshare.png in Resources */ = {isa = PBXBuildFile; fileRef = 23383CD71C53DBBD00A069CC /* topbarshare.png */; };
+		23383D431C53DBBD00A069CC /* topbartitle.png in Resources */ = {isa = PBXBuildFile; fileRef = 23383CD81C53DBBD00A069CC /* topbartitle.png */; };
+		23383D441C53DBBD00A069CC /* varicella_vaccine.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23383CD91C53DBBD00A069CC /* varicella_vaccine.jpg */; };
+		23383D451C53DBBD00A069CC /* virtual_angiography_of_the_heart.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23383CDA1C53DBBD00A069CC /* virtual_angiography_of_the_heart.jpg */; };
+		236206A31C6406EC00714B70 /* SQLiteDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236206A01C6406EC00714B70 /* SQLiteDB.swift */; };
+		236206A41C6406EC00714B70 /* SQLTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236206A11C6406EC00714B70 /* SQLTable.swift */; };
+		236206A51C6406EC00714B70 /* String-Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236206A21C6406EC00714B70 /* String-Extras.swift */; };
+		236206AF1C6511C000714B70 /* sqlCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236206AE1C6511C000714B70 /* sqlCategory.swift */; };
+		236206B11C651ACD00714B70 /* SHViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236206B01C651ACD00714B70 /* SHViewCell.swift */; };
+		236206BB1C65F5F300714B70 /* InfoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236206BA1C65F5F300714B70 /* InfoScreen.swift */; };
+		23769EFC1C5BFF3A00F92DA2 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 23769EFB1C5BFF3A00F92DA2 /* libsqlite3.0.tbd */; };
+		239089311C41115B00CC7018 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239089301C41115B00CC7018 /* AppDelegate.swift */; };
+		239089361C41115B00CC7018 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 239089341C41115B00CC7018 /* Main.storyboard */; };
+		239089381C41115B00CC7018 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 239089371C41115B00CC7018 /* Assets.xcassets */; };
+		2390893B1C41115B00CC7018 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 239089391C41115B00CC7018 /* LaunchScreen.storyboard */; };
+		239089461C41115B00CC7018 /* StayHeathyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239089451C41115B00CC7018 /* StayHeathyTests.swift */; };
+		239089511C41115B00CC7018 /* StayHeathyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239089501C41115B00CC7018 /* StayHeathyUITests.swift */; };
+		23E271581C5D1CDF00B4E9E4 /* SecondRegistrationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E271571C5D1CDF00B4E9E4 /* SecondRegistrationScreen.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		239089421C41115B00CC7018 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 239089251C41115B00CC7018 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2390892C1C41115B00CC7018;
+			remoteInfo = StayHeathy;
+		};
+		2390894D1C41115B00CC7018 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 239089251C41115B00CC7018 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2390892C1C41115B00CC7018;
+			remoteInfo = StayHeathy;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2301F4861C5828170028F673 /* FirstRegistrationScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstRegistrationScreen.swift; sourceTree = "<group>"; };
+		2301F48A1C5841C80028F673 /* MenuScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScreen.swift; sourceTree = "<group>"; };
+		2301F4901C594F6E0028F673 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		23383C721C53DBBD00A069CC /* abdominal_aortic_aneurysm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = abdominal_aortic_aneurysm.png; sourceTree = "<group>"; };
+		23383C731C53DBBD00A069CC /* about.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = about.jpg; sourceTree = "<group>"; };
+		23383C741C53DBBD00A069CC /* aids.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = aids.jpg; sourceTree = "<group>"; };
+		23383C751C53DBBD00A069CC /* akg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = akg.jpg; sourceTree = "<group>"; };
+		23383C771C53DBBD00A069CC /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		23383C791C53DBBD00A069CC /* blood_pressure.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blood_pressure.jpg; sourceTree = "<group>"; };
+		23383C7A1C53DBBD00A069CC /* bmi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bmi.jpg; sourceTree = "<group>"; };
+		23383C7B1C53DBBD00A069CC /* bone_density_testing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bone_density_testing.png; sourceTree = "<group>"; };
+		23383C7C1C53DBBD00A069CC /* brain_work_easy_work.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = brain_work_easy_work.jpg; sourceTree = "<group>"; };
+		23383C7D1C53DBBD00A069CC /* brca.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = brca.jpg; sourceTree = "<group>"; };
+		23383C7E1C53DBBD00A069CC /* breast_self_examination.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = breast_self_examination.gif; sourceTree = "<group>"; };
+		23383C7F1C53DBBD00A069CC /* btn_blue_glossy.9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_blue_glossy.9.png; sourceTree = "<group>"; };
+		23383C801C53DBBD00A069CC /* btn_lightblue_glossy.9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_lightblue_glossy.9.png; sourceTree = "<group>"; };
+		23383C811C53DBBD00A069CC /* btn_white_glossy.9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_white_glossy.9.png; sourceTree = "<group>"; };
+		23383C821C53DBBD00A069CC /* btnlong.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnlong.png; sourceTree = "<group>"; };
+		23383C831C53DBBD00A069CC /* btnshort.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnshort.png; sourceTree = "<group>"; };
+		23383C841C53DBBD00A069CC /* catcancer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = catcancer.png; sourceTree = "<group>"; };
+		23383C851C53DBBD00A069CC /* catgeneral.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = catgeneral.png; sourceTree = "<group>"; };
+		23383C861C53DBBD00A069CC /* catheart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = catheart.png; sourceTree = "<group>"; };
+		23383C871C53DBBD00A069CC /* catmouth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = catmouth.png; sourceTree = "<group>"; };
+		23383C881C53DBBD00A069CC /* catvaccine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = catvaccine.png; sourceTree = "<group>"; };
+		23383C8B1C53DBBD00A069CC /* clalit_not_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clalit_not_selected.png; sourceTree = "<group>"; };
+		23383C8C1C53DBBD00A069CC /* clalit_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clalit_selected.png; sourceTree = "<group>"; };
+		23383C8D1C53DBBD00A069CC /* colonoscopy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = colonoscopy.jpg; sourceTree = "<group>"; };
+		23383C8E1C53DBBD00A069CC /* creatinine_level.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = creatinine_level.jpg; sourceTree = "<group>"; };
+		23383C8F1C53DBBD00A069CC /* dermoscopy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dermoscopy.jpg; sourceTree = "<group>"; };
+		23383C901C53DBBD00A069CC /* diphtheria_and_tetanus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = diphtheria_and_tetanus.jpg; sourceTree = "<group>"; };
+		23383C911C53DBBD00A069CC /* done.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = done.png; sourceTree = "<group>"; };
+		23383C921C53DBBD00A069CC /* edittext_modified_states.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = edittext_modified_states.xml; sourceTree = "<group>"; };
+		23383C931C53DBBD00A069CC /* enlarged_liver_or_spleen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = enlarged_liver_or_spleen.jpg; sourceTree = "<group>"; };
+		23383C941C53DBBD00A069CC /* eye.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = eye.jpg; sourceTree = "<group>"; };
+		23383C951C53DBBD00A069CC /* femal_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = femal_selected.png; sourceTree = "<group>"; };
+		23383C961C53DBBD00A069CC /* femal_unselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = femal_unselected.png; sourceTree = "<group>"; };
+		23383C971C53DBBD00A069CC /* female.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = female.xml; sourceTree = "<group>"; };
+		23383C981C53DBBD00A069CC /* flu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = flu.jpg; sourceTree = "<group>"; };
+		23383C991C53DBBD00A069CC /* frame.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = frame.xml; sourceTree = "<group>"; };
+		23383C9A1C53DBBD00A069CC /* glucose_test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = glucose_test.jpg; sourceTree = "<group>"; };
+		23383C9B1C53DBBD00A069CC /* hearing.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hearing.jpg; sourceTree = "<group>"; };
+		23383C9C1C53DBBD00A069CC /* hepatitisa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hepatitisa.jpg; sourceTree = "<group>"; };
+		23383C9D1C53DBBD00A069CC /* hepatitisb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hepatitisb.jpg; sourceTree = "<group>"; };
+		23383C9E1C53DBBD00A069CC /* hereditary_cancer_genetic_testing.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hereditary_cancer_genetic_testing.jpg; sourceTree = "<group>"; };
+		23383C9F1C53DBBD00A069CC /* herpes_zoster.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = herpes_zoster.jpg; sourceTree = "<group>"; };
+		23383CA01C53DBBD00A069CC /* hpv_vaccine.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hpv_vaccine.jpg; sourceTree = "<group>"; };
+		23383CA11C53DBBD00A069CC /* hygienist.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hygienist.jpg; sourceTree = "<group>"; };
+		23383CA21C53DBBD00A069CC /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		23383CA31C53DBBD00A069CC /* leumit.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = leumit.xml; sourceTree = "<group>"; };
+		23383CA41C53DBBD00A069CC /* lipid_profile.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lipid_profile.jpg; sourceTree = "<group>"; };
+		23383CA61C53DBBD00A069CC /* logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo.jpg; sourceTree = "<group>"; };
+		23383CA71C53DBBD00A069CC /* lumit_not_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lumit_not_selected.png; sourceTree = "<group>"; };
+		23383CA81C53DBBD00A069CC /* lumit_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lumit_selected.png; sourceTree = "<group>"; };
+		23383CA91C53DBBD00A069CC /* lung_cancer.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lung_cancer.jpg; sourceTree = "<group>"; };
+		23383CAB1C53DBBD00A069CC /* lymphatic_cancer_and_thyroid_prevention.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lymphatic_cancer_and_thyroid_prevention.jpg; sourceTree = "<group>"; };
+		23383CAC1C53DBBD00A069CC /* macbi.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = macbi.xml; sourceTree = "<group>"; };
+		23383CAD1C53DBBD00A069CC /* macbi_not_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = macbi_not_selected.png; sourceTree = "<group>"; };
+		23383CAE1C53DBBD00A069CC /* macbi_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = macbi_selected.png; sourceTree = "<group>"; };
+		23383CAF1C53DBBD00A069CC /* male.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = male.xml; sourceTree = "<group>"; };
+		23383CB01C53DBBD00A069CC /* male_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = male_selected.png; sourceTree = "<group>"; };
+		23383CB11C53DBBD00A069CC /* male_unselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = male_unselected.png; sourceTree = "<group>"; };
+		23383CB21C53DBBD00A069CC /* mammography.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mammography.png; sourceTree = "<group>"; };
+		23383CB31C53DBBD00A069CC /* mehodet.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = mehodet.xml; sourceTree = "<group>"; };
+		23383CB41C53DBBD00A069CC /* mehodet_not_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mehodet_not_selected.png; sourceTree = "<group>"; };
+		23383CB51C53DBBD00A069CC /* mehodet_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mehodet_selected.png; sourceTree = "<group>"; };
+		23383CB61C53DBBD00A069CC /* meningococcal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = meningococcal.jpg; sourceTree = "<group>"; };
+		23383CB71C53DBBD00A069CC /* not_smoke.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = not_smoke.xml; sourceTree = "<group>"; };
+		23383CB81C53DBBD00A069CC /* not_smoking_unselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = not_smoking_unselected.png; sourceTree = "<group>"; };
+		23383CB91C53DBBD00A069CC /* not_smpking_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = not_smpking_selected.png; sourceTree = "<group>"; };
+		23383CBA1C53DBBD00A069CC /* oral_examination.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = oral_examination.jpg; sourceTree = "<group>"; };
+		23383CBB1C53DBBD00A069CC /* orthodontic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = orthodontic.jpg; sourceTree = "<group>"; };
+		23383CBC1C53DBBD00A069CC /* ovarian_cancer.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ovarian_cancer.jpg; sourceTree = "<group>"; };
+		23383CBD1C53DBBD00A069CC /* pap.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pap.jpg; sourceTree = "<group>"; };
+		23383CBE1C53DBBD00A069CC /* pertussis.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pertussis.jpg; sourceTree = "<group>"; };
+		23383CBF1C53DBBD00A069CC /* prostate.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = prostate.jpg; sourceTree = "<group>"; };
+		23383CC01C53DBBD00A069CC /* repeat_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = repeat_bg.png; sourceTree = "<group>"; };
+		23383CC11C53DBBD00A069CC /* routine_gynecological_health.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = routine_gynecological_health.jpg; sourceTree = "<group>"; };
+		23383CC21C53DBBD00A069CC /* rubella.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rubella.jpg; sourceTree = "<group>"; };
+		23383CC31C53DBBD00A069CC /* save_your_salfe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = save_your_salfe.png; sourceTree = "<group>"; };
+		23383CC41C53DBBD00A069CC /* save_yourself.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = save_yourself.png; sourceTree = "<group>"; };
+		23383CC51C53DBBD00A069CC /* sceen2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sceen2.jpg; sourceTree = "<group>"; };
+		23383CC61C53DBBD00A069CC /* screen1.png.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = screen1.png.jpg; sourceTree = "<group>"; };
+		23383CC71C53DBBD00A069CC /* share2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = share2.jpg; sourceTree = "<group>"; };
+		23383CC81C53DBBD00A069CC /* share3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = share3.jpg; sourceTree = "<group>"; };
+		23383CC91C53DBBD00A069CC /* share_genral.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = share_genral.jpg; sourceTree = "<group>"; };
+		23383CCA1C53DBBD00A069CC /* sight.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sight.jpg; sourceTree = "<group>"; };
+		23383CCC1C53DBBD00A069CC /* smoke.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = smoke.xml; sourceTree = "<group>"; };
+		23383CCD1C53DBBD00A069CC /* smoking_not_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smoking_not_selected.png; sourceTree = "<group>"; };
+		23383CCE1C53DBBD00A069CC /* smoking_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smoking_selected.png; sourceTree = "<group>"; };
+		23383CCF1C53DBBD00A069CC /* streptococcus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = streptococcus.jpg; sourceTree = "<group>"; };
+		23383CD01C53DBBD00A069CC /* swipe_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swipe_right.png; sourceTree = "<group>"; };
+		23383CD11C53DBBD00A069CC /* teeth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = teeth.jpg; sourceTree = "<group>"; };
+		23383CD21C53DBBD00A069CC /* test.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = test.xml; sourceTree = "<group>"; };
+		23383CD31C53DBBD00A069CC /* testicular_examination_by_physician.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = testicular_examination_by_physician.jpg; sourceTree = "<group>"; };
+		23383CD41C53DBBD00A069CC /* testicular_self_examination.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = testicular_self_examination.jpg; sourceTree = "<group>"; };
+		23383CD51C53DBBD00A069CC /* testing_for_breast_surgeon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = testing_for_breast_surgeon.jpg; sourceTree = "<group>"; };
+		23383CD61C53DBBD00A069CC /* topbarbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topbarbg.png; sourceTree = "<group>"; };
+		23383CD71C53DBBD00A069CC /* topbarshare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topbarshare.png; sourceTree = "<group>"; };
+		23383CD81C53DBBD00A069CC /* topbartitle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topbartitle.png; sourceTree = "<group>"; };
+		23383CD91C53DBBD00A069CC /* varicella_vaccine.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = varicella_vaccine.jpg; sourceTree = "<group>"; };
+		23383CDA1C53DBBD00A069CC /* virtual_angiography_of_the_heart.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = virtual_angiography_of_the_heart.jpg; sourceTree = "<group>"; };
+		236206A01C6406EC00714B70 /* SQLiteDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteDB.swift; sourceTree = "<group>"; };
+		236206A11C6406EC00714B70 /* SQLTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLTable.swift; sourceTree = "<group>"; };
+		236206A21C6406EC00714B70 /* String-Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String-Extras.swift"; sourceTree = "<group>"; };
+		236206A61C6409B600714B70 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		236206AE1C6511C000714B70 /* sqlCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sqlCategory.swift; sourceTree = "<group>"; };
+		236206B01C651ACD00714B70 /* SHViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHViewCell.swift; sourceTree = "<group>"; };
+		236206BA1C65F5F300714B70 /* InfoScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoScreen.swift; sourceTree = "<group>"; };
+		236206C01C668C8200714B70 /* data.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = data.sqlite; sourceTree = "<group>"; };
+		23769EFB1C5BFF3A00F92DA2 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		2390892D1C41115B00CC7018 /* StayHeathy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StayHeathy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		239089301C41115B00CC7018 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		239089351C41115B00CC7018 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		239089371C41115B00CC7018 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2390893A1C41115B00CC7018 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2390893C1C41115B00CC7018 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		239089411C41115B00CC7018 /* StayHeathyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StayHeathyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		239089451C41115B00CC7018 /* StayHeathyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StayHeathyTests.swift; sourceTree = "<group>"; };
+		239089471C41115B00CC7018 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2390894C1C41115B00CC7018 /* StayHeathyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StayHeathyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		239089501C41115B00CC7018 /* StayHeathyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StayHeathyUITests.swift; sourceTree = "<group>"; };
+		239089521C41115B00CC7018 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23E271571C5D1CDF00B4E9E4 /* SecondRegistrationScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondRegistrationScreen.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2390892A1C41115B00CC7018 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23769EFC1C5BFF3A00F92DA2 /* libsqlite3.0.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2390893E1C41115B00CC7018 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		239089491C41115B00CC7018 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		23383C701C53DBBD00A069CC /* application resources */ = {
+			isa = PBXGroup;
+			children = (
+				23769EFB1C5BFF3A00F92DA2 /* libsqlite3.0.tbd */,
+				23383C711C53DBBD00A069CC /* Assets */,
+				23383CDB1C53DBBD00A069CC /* sql db */,
+				2362069E1C6406EC00714B70 /* ThirdParty */,
+			);
+			path = "application resources";
+			sourceTree = "<group>";
+		};
+		23383C711C53DBBD00A069CC /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				23383C721C53DBBD00A069CC /* abdominal_aortic_aneurysm.png */,
+				23383C731C53DBBD00A069CC /* about.jpg */,
+				23383C741C53DBBD00A069CC /* aids.jpg */,
+				23383C751C53DBBD00A069CC /* akg.jpg */,
+				23383C771C53DBBD00A069CC /* bg.png */,
+				23383C791C53DBBD00A069CC /* blood_pressure.jpg */,
+				23383C7A1C53DBBD00A069CC /* bmi.jpg */,
+				23383C7B1C53DBBD00A069CC /* bone_density_testing.png */,
+				23383C7C1C53DBBD00A069CC /* brain_work_easy_work.jpg */,
+				23383C7D1C53DBBD00A069CC /* brca.jpg */,
+				23383C7E1C53DBBD00A069CC /* breast_self_examination.gif */,
+				23383C7F1C53DBBD00A069CC /* btn_blue_glossy.9.png */,
+				23383C801C53DBBD00A069CC /* btn_lightblue_glossy.9.png */,
+				23383C811C53DBBD00A069CC /* btn_white_glossy.9.png */,
+				23383C821C53DBBD00A069CC /* btnlong.png */,
+				23383C831C53DBBD00A069CC /* btnshort.png */,
+				23383C841C53DBBD00A069CC /* catcancer.png */,
+				23383C851C53DBBD00A069CC /* catgeneral.png */,
+				23383C861C53DBBD00A069CC /* catheart.png */,
+				23383C871C53DBBD00A069CC /* catmouth.png */,
+				23383C881C53DBBD00A069CC /* catvaccine.png */,
+				23383C8B1C53DBBD00A069CC /* clalit_not_selected.png */,
+				23383C8C1C53DBBD00A069CC /* clalit_selected.png */,
+				23383C8D1C53DBBD00A069CC /* colonoscopy.jpg */,
+				23383C8E1C53DBBD00A069CC /* creatinine_level.jpg */,
+				23383C8F1C53DBBD00A069CC /* dermoscopy.jpg */,
+				23383C901C53DBBD00A069CC /* diphtheria_and_tetanus.jpg */,
+				23383C911C53DBBD00A069CC /* done.png */,
+				23383C921C53DBBD00A069CC /* edittext_modified_states.xml */,
+				23383C931C53DBBD00A069CC /* enlarged_liver_or_spleen.jpg */,
+				23383C941C53DBBD00A069CC /* eye.jpg */,
+				23383C951C53DBBD00A069CC /* femal_selected.png */,
+				23383C961C53DBBD00A069CC /* femal_unselected.png */,
+				23383C971C53DBBD00A069CC /* female.xml */,
+				23383C981C53DBBD00A069CC /* flu.jpg */,
+				23383C991C53DBBD00A069CC /* frame.xml */,
+				23383C9A1C53DBBD00A069CC /* glucose_test.jpg */,
+				23383C9B1C53DBBD00A069CC /* hearing.jpg */,
+				23383C9C1C53DBBD00A069CC /* hepatitisa.jpg */,
+				23383C9D1C53DBBD00A069CC /* hepatitisb.jpg */,
+				23383C9E1C53DBBD00A069CC /* hereditary_cancer_genetic_testing.jpg */,
+				23383C9F1C53DBBD00A069CC /* herpes_zoster.jpg */,
+				23383CA01C53DBBD00A069CC /* hpv_vaccine.jpg */,
+				23383CA11C53DBBD00A069CC /* hygienist.jpg */,
+				23383CA21C53DBBD00A069CC /* icon.png */,
+				23383CA31C53DBBD00A069CC /* leumit.xml */,
+				23383CA41C53DBBD00A069CC /* lipid_profile.jpg */,
+				23383CA61C53DBBD00A069CC /* logo.jpg */,
+				23383CA71C53DBBD00A069CC /* lumit_not_selected.png */,
+				23383CA81C53DBBD00A069CC /* lumit_selected.png */,
+				23383CA91C53DBBD00A069CC /* lung_cancer.jpg */,
+				23383CAB1C53DBBD00A069CC /* lymphatic_cancer_and_thyroid_prevention.jpg */,
+				23383CAC1C53DBBD00A069CC /* macbi.xml */,
+				23383CAD1C53DBBD00A069CC /* macbi_not_selected.png */,
+				23383CAE1C53DBBD00A069CC /* macbi_selected.png */,
+				23383CAF1C53DBBD00A069CC /* male.xml */,
+				23383CB01C53DBBD00A069CC /* male_selected.png */,
+				23383CB11C53DBBD00A069CC /* male_unselected.png */,
+				23383CB21C53DBBD00A069CC /* mammography.png */,
+				23383CB31C53DBBD00A069CC /* mehodet.xml */,
+				23383CB41C53DBBD00A069CC /* mehodet_not_selected.png */,
+				23383CB51C53DBBD00A069CC /* mehodet_selected.png */,
+				23383CB61C53DBBD00A069CC /* meningococcal.jpg */,
+				23383CB71C53DBBD00A069CC /* not_smoke.xml */,
+				23383CB81C53DBBD00A069CC /* not_smoking_unselected.png */,
+				23383CB91C53DBBD00A069CC /* not_smpking_selected.png */,
+				23383CBA1C53DBBD00A069CC /* oral_examination.jpg */,
+				23383CBB1C53DBBD00A069CC /* orthodontic.jpg */,
+				23383CBC1C53DBBD00A069CC /* ovarian_cancer.jpg */,
+				23383CBD1C53DBBD00A069CC /* pap.jpg */,
+				23383CBE1C53DBBD00A069CC /* pertussis.jpg */,
+				23383CBF1C53DBBD00A069CC /* prostate.jpg */,
+				23383CC01C53DBBD00A069CC /* repeat_bg.png */,
+				23383CC11C53DBBD00A069CC /* routine_gynecological_health.jpg */,
+				23383CC21C53DBBD00A069CC /* rubella.jpg */,
+				23383CC31C53DBBD00A069CC /* save_your_salfe.png */,
+				23383CC41C53DBBD00A069CC /* save_yourself.png */,
+				23383CC51C53DBBD00A069CC /* sceen2.jpg */,
+				23383CC61C53DBBD00A069CC /* screen1.png.jpg */,
+				23383CC71C53DBBD00A069CC /* share2.jpg */,
+				23383CC81C53DBBD00A069CC /* share3.jpg */,
+				23383CC91C53DBBD00A069CC /* share_genral.jpg */,
+				23383CCA1C53DBBD00A069CC /* sight.jpg */,
+				23383CCC1C53DBBD00A069CC /* smoke.xml */,
+				23383CCD1C53DBBD00A069CC /* smoking_not_selected.png */,
+				23383CCE1C53DBBD00A069CC /* smoking_selected.png */,
+				23383CCF1C53DBBD00A069CC /* streptococcus.jpg */,
+				23383CD01C53DBBD00A069CC /* swipe_right.png */,
+				23383CD11C53DBBD00A069CC /* teeth.jpg */,
+				23383CD21C53DBBD00A069CC /* test.xml */,
+				23383CD31C53DBBD00A069CC /* testicular_examination_by_physician.jpg */,
+				23383CD41C53DBBD00A069CC /* testicular_self_examination.jpg */,
+				23383CD51C53DBBD00A069CC /* testing_for_breast_surgeon.jpg */,
+				23383CD61C53DBBD00A069CC /* topbarbg.png */,
+				23383CD71C53DBBD00A069CC /* topbarshare.png */,
+				23383CD81C53DBBD00A069CC /* topbartitle.png */,
+				23383CD91C53DBBD00A069CC /* varicella_vaccine.jpg */,
+				23383CDA1C53DBBD00A069CC /* virtual_angiography_of_the_heart.jpg */,
+			);
+			name = Assets;
+			path = drawable;
+			sourceTree = "<group>";
+		};
+		23383CDB1C53DBBD00A069CC /* sql db */ = {
+			isa = PBXGroup;
+			children = (
+				236206C01C668C8200714B70 /* data.sqlite */,
+			);
+			path = "sql db";
+			sourceTree = "<group>";
+		};
+		2362069E1C6406EC00714B70 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				236206A01C6406EC00714B70 /* SQLiteDB.swift */,
+				236206A11C6406EC00714B70 /* SQLTable.swift */,
+				236206A21C6406EC00714B70 /* String-Extras.swift */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		236206A71C64F36300714B70 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				2301F4901C594F6E0028F673 /* Person.swift */,
+				236206AE1C6511C000714B70 /* sqlCategory.swift */,
+				236206B01C651ACD00714B70 /* SHViewCell.swift */,
+			);
+			name = classes;
+			sourceTree = "<group>";
+		};
+		239089241C41115B00CC7018 = {
+			isa = PBXGroup;
+			children = (
+				2390892F1C41115B00CC7018 /* StayHeathy */,
+				23383C701C53DBBD00A069CC /* application resources */,
+				239089441C41115B00CC7018 /* StayHeathyTests */,
+				2390894F1C41115B00CC7018 /* StayHeathyUITests */,
+				2390892E1C41115B00CC7018 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2390892E1C41115B00CC7018 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2390892D1C41115B00CC7018 /* StayHeathy.app */,
+				239089411C41115B00CC7018 /* StayHeathyTests.xctest */,
+				2390894C1C41115B00CC7018 /* StayHeathyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2390892F1C41115B00CC7018 /* StayHeathy */ = {
+			isa = PBXGroup;
+			children = (
+				236206A71C64F36300714B70 /* classes */,
+				236206A61C6409B600714B70 /* Bridging-Header.h */,
+				239089301C41115B00CC7018 /* AppDelegate.swift */,
+				239089341C41115B00CC7018 /* Main.storyboard */,
+				236206BA1C65F5F300714B70 /* InfoScreen.swift */,
+				2301F4861C5828170028F673 /* FirstRegistrationScreen.swift */,
+				23E271571C5D1CDF00B4E9E4 /* SecondRegistrationScreen.swift */,
+				2301F48A1C5841C80028F673 /* MenuScreen.swift */,
+				239089371C41115B00CC7018 /* Assets.xcassets */,
+				239089391C41115B00CC7018 /* LaunchScreen.storyboard */,
+				2390893C1C41115B00CC7018 /* Info.plist */,
+			);
+			path = StayHeathy;
+			sourceTree = "<group>";
+		};
+		239089441C41115B00CC7018 /* StayHeathyTests */ = {
+			isa = PBXGroup;
+			children = (
+				239089451C41115B00CC7018 /* StayHeathyTests.swift */,
+				239089471C41115B00CC7018 /* Info.plist */,
+			);
+			path = StayHeathyTests;
+			sourceTree = "<group>";
+		};
+		2390894F1C41115B00CC7018 /* StayHeathyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				239089501C41115B00CC7018 /* StayHeathyUITests.swift */,
+				239089521C41115B00CC7018 /* Info.plist */,
+			);
+			path = StayHeathyUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2390892C1C41115B00CC7018 /* StayHeathy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 239089551C41115B00CC7018 /* Build configuration list for PBXNativeTarget "StayHeathy" */;
+			buildPhases = (
+				239089291C41115B00CC7018 /* Sources */,
+				2390892A1C41115B00CC7018 /* Frameworks */,
+				2390892B1C41115B00CC7018 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StayHeathy;
+			productName = StayHeathy;
+			productReference = 2390892D1C41115B00CC7018 /* StayHeathy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		239089401C41115B00CC7018 /* StayHeathyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 239089581C41115B00CC7018 /* Build configuration list for PBXNativeTarget "StayHeathyTests" */;
+			buildPhases = (
+				2390893D1C41115B00CC7018 /* Sources */,
+				2390893E1C41115B00CC7018 /* Frameworks */,
+				2390893F1C41115B00CC7018 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				239089431C41115B00CC7018 /* PBXTargetDependency */,
+			);
+			name = StayHeathyTests;
+			productName = StayHeathyTests;
+			productReference = 239089411C41115B00CC7018 /* StayHeathyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2390894B1C41115B00CC7018 /* StayHeathyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2390895B1C41115B00CC7018 /* Build configuration list for PBXNativeTarget "StayHeathyUITests" */;
+			buildPhases = (
+				239089481C41115B00CC7018 /* Sources */,
+				239089491C41115B00CC7018 /* Frameworks */,
+				2390894A1C41115B00CC7018 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2390894E1C41115B00CC7018 /* PBXTargetDependency */,
+			);
+			name = StayHeathyUITests;
+			productName = StayHeathyUITests;
+			productReference = 2390894C1C41115B00CC7018 /* StayHeathyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		239089251C41115B00CC7018 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Roi Kedarya";
+				TargetAttributes = {
+					2390892C1C41115B00CC7018 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					239089401C41115B00CC7018 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 2390892C1C41115B00CC7018;
+					};
+					2390894B1C41115B00CC7018 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 2390892C1C41115B00CC7018;
+					};
+				};
+			};
+			buildConfigurationList = 239089281C41115B00CC7018 /* Build configuration list for PBXProject "StayHeathy" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 239089241C41115B00CC7018;
+			productRefGroup = 2390892E1C41115B00CC7018 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2390892C1C41115B00CC7018 /* StayHeathy */,
+				239089401C41115B00CC7018 /* StayHeathyTests */,
+				2390894B1C41115B00CC7018 /* StayHeathyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2390892B1C41115B00CC7018 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23383D0D1C53DBBD00A069CC /* icon.png in Resources */,
+				23383D251C53DBBD00A069CC /* oral_examination.jpg in Resources */,
+				23383D1A1C53DBBD00A069CC /* male.xml in Resources */,
+				23383D2E1C53DBBD00A069CC /* save_your_salfe.png in Resources */,
+				23383CDE1C53DBBD00A069CC /* about.jpg in Resources */,
+				23383D1F1C53DBBD00A069CC /* mehodet_not_selected.png in Resources */,
+				23383CE81C53DBBD00A069CC /* brca.jpg in Resources */,
+				23383CED1C53DBBD00A069CC /* btnlong.png in Resources */,
+				23383D2A1C53DBBD00A069CC /* prostate.jpg in Resources */,
+				23383D1B1C53DBBD00A069CC /* male_selected.png in Resources */,
+				23383CE21C53DBBD00A069CC /* bg.png in Resources */,
+				23383CFB1C53DBBD00A069CC /* diphtheria_and_tetanus.jpg in Resources */,
+				23383D271C53DBBD00A069CC /* ovarian_cancer.jpg in Resources */,
+				23383D1E1C53DBBD00A069CC /* mehodet.xml in Resources */,
+				23383CEC1C53DBBD00A069CC /* btn_white_glossy.9.png in Resources */,
+				23383CEB1C53DBBD00A069CC /* btn_lightblue_glossy.9.png in Resources */,
+				23383D411C53DBBD00A069CC /* topbarbg.png in Resources */,
+				23383D0A1C53DBBD00A069CC /* herpes_zoster.jpg in Resources */,
+				23383D011C53DBBD00A069CC /* femal_unselected.png in Resources */,
+				23383D171C53DBBD00A069CC /* macbi.xml in Resources */,
+				23383CFE1C53DBBD00A069CC /* enlarged_liver_or_spleen.jpg in Resources */,
+				23383D081C53DBBD00A069CC /* hepatitisb.jpg in Resources */,
+				23383D001C53DBBD00A069CC /* femal_selected.png in Resources */,
+				23383D2D1C53DBBD00A069CC /* rubella.jpg in Resources */,
+				23383D091C53DBBD00A069CC /* hereditary_cancer_genetic_testing.jpg in Resources */,
+				23383D451C53DBBD00A069CC /* virtual_angiography_of_the_heart.jpg in Resources */,
+				23383D141C53DBBD00A069CC /* lung_cancer.jpg in Resources */,
+				23383D421C53DBBD00A069CC /* topbarshare.png in Resources */,
+				23383D161C53DBBD00A069CC /* lymphatic_cancer_and_thyroid_prevention.jpg in Resources */,
+				23383D021C53DBBD00A069CC /* female.xml in Resources */,
+				2390893B1C41115B00CC7018 /* LaunchScreen.storyboard in Resources */,
+				23383CF21C53DBBD00A069CC /* catmouth.png in Resources */,
+				23383CEA1C53DBBD00A069CC /* btn_blue_glossy.9.png in Resources */,
+				23383CE91C53DBBD00A069CC /* breast_self_examination.gif in Resources */,
+				23383D321C53DBBD00A069CC /* share2.jpg in Resources */,
+				23383D351C53DBBD00A069CC /* sight.jpg in Resources */,
+				23383D371C53DBBD00A069CC /* smoke.xml in Resources */,
+				23383D0F1C53DBBD00A069CC /* lipid_profile.jpg in Resources */,
+				23383CF01C53DBBD00A069CC /* catgeneral.png in Resources */,
+				23383D331C53DBBD00A069CC /* share3.jpg in Resources */,
+				23383D391C53DBBD00A069CC /* smoking_selected.png in Resources */,
+				23383D341C53DBBD00A069CC /* share_genral.jpg in Resources */,
+				23383D1C1C53DBBD00A069CC /* male_unselected.png in Resources */,
+				23383D221C53DBBD00A069CC /* not_smoke.xml in Resources */,
+				23383CF11C53DBBD00A069CC /* catheart.png in Resources */,
+				23383D441C53DBBD00A069CC /* varicella_vaccine.jpg in Resources */,
+				23383D3A1C53DBBD00A069CC /* streptococcus.jpg in Resources */,
+				23383D301C53DBBD00A069CC /* sceen2.jpg in Resources */,
+				23383CEF1C53DBBD00A069CC /* catcancer.png in Resources */,
+				23383D071C53DBBD00A069CC /* hepatitisa.jpg in Resources */,
+				23383D431C53DBBD00A069CC /* topbartitle.png in Resources */,
+				23383CEE1C53DBBD00A069CC /* btnshort.png in Resources */,
+				23383D2F1C53DBBD00A069CC /* save_yourself.png in Resources */,
+				23383D3D1C53DBBD00A069CC /* test.xml in Resources */,
+				23383D031C53DBBD00A069CC /* flu.jpg in Resources */,
+				23383CFA1C53DBBD00A069CC /* dermoscopy.jpg in Resources */,
+				23383CE71C53DBBD00A069CC /* brain_work_easy_work.jpg in Resources */,
+				23383D2C1C53DBBD00A069CC /* routine_gynecological_health.jpg in Resources */,
+				23383D381C53DBBD00A069CC /* smoking_not_selected.png in Resources */,
+				23383CE41C53DBBD00A069CC /* blood_pressure.jpg in Resources */,
+				239089381C41115B00CC7018 /* Assets.xcassets in Resources */,
+				23383D111C53DBBD00A069CC /* logo.jpg in Resources */,
+				23383CF61C53DBBD00A069CC /* clalit_not_selected.png in Resources */,
+				23383D211C53DBBD00A069CC /* meningococcal.jpg in Resources */,
+				23383D0E1C53DBBD00A069CC /* leumit.xml in Resources */,
+				23383D061C53DBBD00A069CC /* hearing.jpg in Resources */,
+				23383CE51C53DBBD00A069CC /* bmi.jpg in Resources */,
+				23383D191C53DBBD00A069CC /* macbi_selected.png in Resources */,
+				23383D121C53DBBD00A069CC /* lumit_not_selected.png in Resources */,
+				23383D401C53DBBD00A069CC /* testing_for_breast_surgeon.jpg in Resources */,
+				23383D2B1C53DBBD00A069CC /* repeat_bg.png in Resources */,
+				23383CF71C53DBBD00A069CC /* clalit_selected.png in Resources */,
+				23383D201C53DBBD00A069CC /* mehodet_selected.png in Resources */,
+				23383D041C53DBBD00A069CC /* frame.xml in Resources */,
+				23383D3F1C53DBBD00A069CC /* testicular_self_examination.jpg in Resources */,
+				23383CF81C53DBBD00A069CC /* colonoscopy.jpg in Resources */,
+				23383CF31C53DBBD00A069CC /* catvaccine.png in Resources */,
+				23383D231C53DBBD00A069CC /* not_smoking_unselected.png in Resources */,
+				23383D3B1C53DBBD00A069CC /* swipe_right.png in Resources */,
+				23383D311C53DBBD00A069CC /* screen1.png.jpg in Resources */,
+				23383CE61C53DBBD00A069CC /* bone_density_testing.png in Resources */,
+				23383D181C53DBBD00A069CC /* macbi_not_selected.png in Resources */,
+				23383CFD1C53DBBD00A069CC /* edittext_modified_states.xml in Resources */,
+				23383D3E1C53DBBD00A069CC /* testicular_examination_by_physician.jpg in Resources */,
+				239089361C41115B00CC7018 /* Main.storyboard in Resources */,
+				23383D261C53DBBD00A069CC /* orthodontic.jpg in Resources */,
+				23383CF91C53DBBD00A069CC /* creatinine_level.jpg in Resources */,
+				23383CFC1C53DBBD00A069CC /* done.png in Resources */,
+				23383CE01C53DBBD00A069CC /* akg.jpg in Resources */,
+				23383D241C53DBBD00A069CC /* not_smpking_selected.png in Resources */,
+				23383D1D1C53DBBD00A069CC /* mammography.png in Resources */,
+				23383D0C1C53DBBD00A069CC /* hygienist.jpg in Resources */,
+				23383D281C53DBBD00A069CC /* pap.jpg in Resources */,
+				23383D131C53DBBD00A069CC /* lumit_selected.png in Resources */,
+				23383D051C53DBBD00A069CC /* glucose_test.jpg in Resources */,
+				23383D0B1C53DBBD00A069CC /* hpv_vaccine.jpg in Resources */,
+				23383CFF1C53DBBD00A069CC /* eye.jpg in Resources */,
+				23383CDF1C53DBBD00A069CC /* aids.jpg in Resources */,
+				23383D291C53DBBD00A069CC /* pertussis.jpg in Resources */,
+				23383CDD1C53DBBD00A069CC /* abdominal_aortic_aneurysm.png in Resources */,
+				23383D3C1C53DBBD00A069CC /* teeth.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2390893F1C41115B00CC7018 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2390894A1C41115B00CC7018 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		239089291C41115B00CC7018 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2301F4911C594F6E0028F673 /* Person.swift in Sources */,
+				236206BB1C65F5F300714B70 /* InfoScreen.swift in Sources */,
+				236206A41C6406EC00714B70 /* SQLTable.swift in Sources */,
+				2301F48B1C5841C80028F673 /* MenuScreen.swift in Sources */,
+				23E271581C5D1CDF00B4E9E4 /* SecondRegistrationScreen.swift in Sources */,
+				236206A51C6406EC00714B70 /* String-Extras.swift in Sources */,
+				236206AF1C6511C000714B70 /* sqlCategory.swift in Sources */,
+				239089311C41115B00CC7018 /* AppDelegate.swift in Sources */,
+				236206B11C651ACD00714B70 /* SHViewCell.swift in Sources */,
+				2301F4871C5828170028F673 /* FirstRegistrationScreen.swift in Sources */,
+				236206A31C6406EC00714B70 /* SQLiteDB.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2390893D1C41115B00CC7018 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				239089461C41115B00CC7018 /* StayHeathyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		239089481C41115B00CC7018 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				239089511C41115B00CC7018 /* StayHeathyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		239089431C41115B00CC7018 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2390892C1C41115B00CC7018 /* StayHeathy */;
+			targetProxy = 239089421C41115B00CC7018 /* PBXContainerItemProxy */;
+		};
+		2390894E1C41115B00CC7018 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2390892C1C41115B00CC7018 /* StayHeathy */;
+			targetProxy = 2390894D1C41115B00CC7018 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		239089341C41115B00CC7018 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				239089351C41115B00CC7018 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		239089391C41115B00CC7018 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2390893A1C41115B00CC7018 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		239089531C41115B00CC7018 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		239089541C41115B00CC7018 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		239089561C41115B00CC7018 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = StayHeathy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Apps.StayHeathy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "StayHeathy/Bridging-Header.h";
+				"SWIFT_OPTIMIZATION_LEVEL[arch=*]" = "-Onone";
+			};
+			name = Debug;
+		};
+		239089571C41115B00CC7018 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = StayHeathy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Apps.StayHeathy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "StayHeathy/Bridging-Header.h";
+			};
+			name = Release;
+		};
+		239089591C41115B00CC7018 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = StayHeathyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Apps.StayHeathyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StayHeathy.app/StayHeathy";
+			};
+			name = Debug;
+		};
+		2390895A1C41115B00CC7018 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = StayHeathyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Apps.StayHeathyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StayHeathy.app/StayHeathy";
+			};
+			name = Release;
+		};
+		2390895C1C41115B00CC7018 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = StayHeathyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Apps.StayHeathyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = StayHeathy;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		2390895D1C41115B00CC7018 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = StayHeathyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Apps.StayHeathyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = StayHeathy;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		239089281C41115B00CC7018 /* Build configuration list for PBXProject "StayHeathy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				239089531C41115B00CC7018 /* Debug */,
+				239089541C41115B00CC7018 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		239089551C41115B00CC7018 /* Build configuration list for PBXNativeTarget "StayHeathy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				239089561C41115B00CC7018 /* Debug */,
+				239089571C41115B00CC7018 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		239089581C41115B00CC7018 /* Build configuration list for PBXNativeTarget "StayHeathyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				239089591C41115B00CC7018 /* Debug */,
+				2390895A1C41115B00CC7018 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2390895B1C41115B00CC7018 /* Build configuration list for PBXNativeTarget "StayHeathyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2390895C1C41115B00CC7018 /* Debug */,
+				2390895D1C41115B00CC7018 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 239089251C41115B00CC7018 /* Project object */;
+}
