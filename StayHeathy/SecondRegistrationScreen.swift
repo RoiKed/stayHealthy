@@ -27,6 +27,7 @@ class SecondRegistrationScreen: UIViewController ,UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: Selector("dismissKeyboard")))
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -35,18 +36,23 @@ class SecondRegistrationScreen: UIViewController ,UITextFieldDelegate {
         if (userDefaults.objectForKey("user_details") != nil) {
             self.personDetails = (userDefaults.objectForKey("user_details") as! NSDictionary)
             self.userDetails = NSMutableDictionary(dictionary: personDetails)
-        }
+        } 
         // update all fields for user details
         self.updateAllFields()
     }
     
     override func viewWillDisappear(animated: Bool) {
-        self.registerDetails()
+        super.viewWillDisappear(animated)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func dismissKeyboard () {
+        self.fullNameTextField.resignFirstResponder()
+        self.emailTextField.resignFirstResponder()
     }
     
     func updateAllFields() {
@@ -107,8 +113,20 @@ class SecondRegistrationScreen: UIViewController ,UITextFieldDelegate {
     }
     
     @IBAction func DoneButtonTapped(sender: AnyObject) {
-        self.registerDetails()
-        
+        var canSegue = true
+        for key in self.personDetails.allKeys {
+            if (self.personDetails.objectForKey(key) == nil) {
+                canSegue = false
+                let alert = UIAlertController(title: "", message:" אנא מלא את השדות הבאים:", preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "אישור", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction!) in
+                    alert.dismissViewControllerAnimated(true, completion: nil)
+                }))
+            }
+        }
+        if canSegue {
+            //segue to next screen
+            self.registerDetails()
+        }
     }
     
     func registerDetails() {
@@ -119,12 +137,7 @@ class SecondRegistrationScreen: UIViewController ,UITextFieldDelegate {
 
         
     }
-    
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        super.touchesBegan(touches, withEvent: event)
-        self.view.endEditing(true)
-    }
-    
+        
     // MARK: textField Delegate
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder();
@@ -138,26 +151,32 @@ class SecondRegistrationScreen: UIViewController ,UITextFieldDelegate {
         if (distanceToKeyBoard < 0) {
             scrollView.setContentOffset(CGPointMake(0, abs(distanceToKeyBoard)+30), animated: true)
         }
+        if (textField.tag == 3) {
+            textField.keyboardType = UIKeyboardType.NumbersAndPunctuation
+        }
         //clear the old text
-        textFieldPreviousText = textField.text!
+        if (textField.text != "") {
+            textFieldPreviousText = textField.text!
+        }
         textField.text = ""
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
         scrollView.setContentOffset(CGPointMake(0, 0), animated: true)
-        let textFieldTag = textField.tag
-        switch (textFieldTag) {
-        //full name
-        case 2:
-            self.userDetails .setValue(fullNameTextField.text!, forKey: "full_name")
-        //email
-        case 3:
-            self.userDetails .setValue(emailTextField.text!, forKey: "email")
-        default:
-            print("no uiTag found for TextField")
-        }
         if (textField.text == "") {
-            textField.text = textFieldPreviousText! as String
+            textField.text = textFieldPreviousText as String
+        } else {
+            let textFieldTag = textField.tag
+            switch (textFieldTag) {
+            //full name
+            case 2:
+                self.userDetails .setValue(fullNameTextField.text!, forKey: "full_name")
+            //phone number
+            case 3:
+                self.userDetails .setValue(emailTextField.text!, forKey: "email")
+            default:
+                print("no uiTag found for TextField")
+            }
         }
     }
     

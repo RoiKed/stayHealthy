@@ -21,8 +21,8 @@ class FirstRegistrationScreen: UIViewController ,UITextFieldDelegate {
     @IBOutlet weak var scrollView: UIScrollView!
     
     var userDetails:NSMutableDictionary!
-    var textFieldPreviousText : NSString!
-    var personDetails :NSDictionary!
+    var textFieldPreviousText: NSString!
+    var personDetails: NSDictionary!
     
     
     
@@ -33,8 +33,14 @@ class FirstRegistrationScreen: UIViewController ,UITextFieldDelegate {
             self.personDetails = (userDefaults.objectForKey("user_details") as! NSDictionary)
             self.userDetails = NSMutableDictionary(dictionary: personDetails)
         } else {
-            self.userDetails = NSMutableDictionary.init(capacity: 20)
+            self.userDetails = ["gender":"","age":"גיל","city":"עיר","is_smoking":""]
         }
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: Selector("dismissKeyboard")))
+    }
+    
+    func dismissKeyboard () {
+        cityTextField.resignFirstResponder()
+        ageTextField.resignFirstResponder()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -59,7 +65,7 @@ class FirstRegistrationScreen: UIViewController ,UITextFieldDelegate {
     
     func updateAllFields() {
         if (self.userDetails.objectForKey("gender") != nil) {
-            self.maleButton.selected = (self.userDetails.objectForKey("gender") as! NSString).isEqualToString("male")
+            self.maleButton.selected = (self.userDetails.objectForKey("gender") as! NSString).isEqualToString("M")
             self.femaleButton.selected = !self.maleButton.selected
         }
         if (self.userDetails.objectForKey("age") != nil) {
@@ -78,7 +84,7 @@ class FirstRegistrationScreen: UIViewController ,UITextFieldDelegate {
         self.femaleButton.selected = false
         self.maleButton.selected = true
         if (self.userDetails != nil) {
-            self.userDetails.setObject("male", forKey: "gender")
+            self.userDetails.setObject("M", forKey: "gender")
         }
         
     }
@@ -87,7 +93,7 @@ class FirstRegistrationScreen: UIViewController ,UITextFieldDelegate {
         self.maleButton.selected = false
         self.femaleButton.selected = true
         if (self.userDetails != nil) {
-            self.userDetails.setObject("female", forKey: "gender")
+            self.userDetails.setObject("W", forKey: "gender")
         }
         
     }
@@ -109,8 +115,23 @@ class FirstRegistrationScreen: UIViewController ,UITextFieldDelegate {
     }
     
     @IBAction func DoneButtonTapped(sender: AnyObject) {
-        //self.registerDetails()
-        
+        var canSegue = true
+        for key in self.userDetails.allKeys {
+            if (self.userDetails.objectForKey(key) == nil ||  self.userDetails.objectForKey(key) as! NSString == "") {
+                canSegue = false
+                let alert = UIAlertController(title: "", message:" אנא מלא את השדות הבאים:", preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "אישור", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction!) in
+                    alert.dismissViewControllerAnimated(true, completion: nil)
+                }))
+                presentViewController(alert, animated: true, completion: nil)
+            }
+        }
+        if canSegue {
+            //segue to next screen
+            self.registerDetails()
+            self.performSegueWithIdentifier("segueToSecondReg", sender: nil)
+        }
+
     }
     
     func registerDetails() {
@@ -118,11 +139,6 @@ class FirstRegistrationScreen: UIViewController ,UITextFieldDelegate {
             let userDefaults = NSUserDefaults.standardUserDefaults()
             userDefaults.setObject(self.userDetails, forKey: "user_details")
         }
-    }
-    
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        super.touchesBegan(touches, withEvent: event)
-        self.view.endEditing(true)
     }
     
     // MARK: textField Delegate
@@ -138,26 +154,32 @@ class FirstRegistrationScreen: UIViewController ,UITextFieldDelegate {
         if (distanceToKeyBoard < 0) {
             scrollView.setContentOffset(CGPointMake(0, abs(distanceToKeyBoard)+30), animated: true)
         }
+        if (textField.tag == 0) {
+            textField.keyboardType = UIKeyboardType.NumberPad
+        }
         //clear the old text
-        textFieldPreviousText = textField.text
+        if (textField.text != "") {
+            textFieldPreviousText = textField.text!
+        }
         textField.text = ""
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
         scrollView.setContentOffset(CGPointMake(0, 0), animated: true)
-        let textFieldTag = textField.tag
-        switch (textFieldTag) {
-        //age
-        case 0:
-            self.userDetails.setObject(ageTextField.text!, forKey: "age")
-        //city
-        case 1:
-            self.userDetails.setObject(cityTextField.text!, forKey: "city")
-        default:
-            print("no uiTag found for TextField")
-        }
         if (textField.text == "") {
             textField.text = textFieldPreviousText as String
+        } else {
+            let textFieldTag = textField.tag
+            switch (textFieldTag) {
+            //age
+            case 0:
+                self.userDetails.setObject(ageTextField.text!, forKey: "age")
+            //city
+            case 1:
+                self.userDetails.setObject(cityTextField.text!, forKey: "city")
+            default:
+                print("no uiTag found for TextField")
+            }
         }
     }
     

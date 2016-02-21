@@ -12,4 +12,6 @@ class SHViewCell: UICollectionViewCell {
     
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var titleImage: UIImageView!
+    var uniqueId: String!
 }
+

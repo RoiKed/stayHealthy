@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2301AC801C67EA2B008D1A55 /* data.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 2301AC7F1C67EA2B008D1A55 /* data.sqlite */; };
 		2301F4871C5828170028F673 /* FirstRegistrationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2301F4861C5828170028F673 /* FirstRegistrationScreen.swift */; };
 		2301F48B1C5841C80028F673 /* MenuScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2301F48A1C5841C80028F673 /* MenuScreen.swift */; };
 		2301F4911C594F6E0028F673 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2301F4901C594F6E0028F673 /* Person.swift */; };
+		23171D241C7904840094D56D /* CalenderPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23171D231C7904840094D56D /* CalenderPickerViewController.swift */; };
 		23383CDD1C53DBBD00A069CC /* abdominal_aortic_aneurysm.png in Resources */ = {isa = PBXBuildFile; fileRef = 23383C721C53DBBD00A069CC /* abdominal_aortic_aneurysm.png */; };
 		23383CDE1C53DBBD00A069CC /* about.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23383C731C53DBBD00A069CC /* about.jpg */; };
 		23383CDF1C53DBBD00A069CC /* aids.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23383C741C53DBBD00A069CC /* aids.jpg */; };
@@ -142,9 +144,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2301AC7F1C67EA2B008D1A55 /* data.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = data.sqlite; sourceTree = "<group>"; };
 		2301F4861C5828170028F673 /* FirstRegistrationScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstRegistrationScreen.swift; sourceTree = "<group>"; };
 		2301F48A1C5841C80028F673 /* MenuScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScreen.swift; sourceTree = "<group>"; };
 		2301F4901C594F6E0028F673 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		23171D231C7904840094D56D /* CalenderPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalenderPickerViewController.swift; sourceTree = "<group>"; };
 		23383C721C53DBBD00A069CC /* abdominal_aortic_aneurysm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = abdominal_aortic_aneurysm.png; sourceTree = "<group>"; };
 		23383C731C53DBBD00A069CC /* about.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = about.jpg; sourceTree = "<group>"; };
 		23383C741C53DBBD00A069CC /* aids.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = aids.jpg; sourceTree = "<group>"; };
@@ -250,7 +254,6 @@
 		236206AE1C6511C000714B70 /* sqlCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sqlCategory.swift; sourceTree = "<group>"; };
 		236206B01C651ACD00714B70 /* SHViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHViewCell.swift; sourceTree = "<group>"; };
 		236206BA1C65F5F300714B70 /* InfoScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoScreen.swift; sourceTree = "<group>"; };
-		236206C01C668C8200714B70 /* data.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = data.sqlite; sourceTree = "<group>"; };
 		23769EFB1C5BFF3A00F92DA2 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		2390892D1C41115B00CC7018 /* StayHeathy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StayHeathy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		239089301C41115B00CC7018 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -413,7 +416,7 @@
 		23383CDB1C53DBBD00A069CC /* sql db */ = {
 			isa = PBXGroup;
 			children = (
-				236206C01C668C8200714B70 /* data.sqlite */,
+				2301AC7F1C67EA2B008D1A55 /* data.sqlite */,
 			);
 			path = "sql db";
 			sourceTree = "<group>";
@@ -466,10 +469,11 @@
 				236206A61C6409B600714B70 /* Bridging-Header.h */,
 				239089301C41115B00CC7018 /* AppDelegate.swift */,
 				239089341C41115B00CC7018 /* Main.storyboard */,
-				236206BA1C65F5F300714B70 /* InfoScreen.swift */,
 				2301F4861C5828170028F673 /* FirstRegistrationScreen.swift */,
 				23E271571C5D1CDF00B4E9E4 /* SecondRegistrationScreen.swift */,
+				236206BA1C65F5F300714B70 /* InfoScreen.swift */,
 				2301F48A1C5841C80028F673 /* MenuScreen.swift */,
+				23171D231C7904840094D56D /* CalenderPickerViewController.swift */,
 				239089371C41115B00CC7018 /* Assets.xcassets */,
 				239089391C41115B00CC7018 /* LaunchScreen.storyboard */,
 				2390893C1C41115B00CC7018 /* Info.plist */,
@@ -666,6 +670,7 @@
 				23383D0E1C53DBBD00A069CC /* leumit.xml in Resources */,
 				23383D061C53DBBD00A069CC /* hearing.jpg in Resources */,
 				23383CE51C53DBBD00A069CC /* bmi.jpg in Resources */,
+				2301AC801C67EA2B008D1A55 /* data.sqlite in Resources */,
 				23383D191C53DBBD00A069CC /* macbi_selected.png in Resources */,
 				23383D121C53DBBD00A069CC /* lumit_not_selected.png in Resources */,
 				23383D401C53DBBD00A069CC /* testing_for_breast_surgeon.jpg in Resources */,
@@ -724,6 +729,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23171D241C7904840094D56D /* CalenderPickerViewController.swift in Sources */,
 				2301F4911C594F6E0028F673 /* Person.swift in Sources */,
 				236206BB1C65F5F300714B70 /* InfoScreen.swift in Sources */,
 				236206A41C6406EC00714B70 /* SQLTable.swift in Sources */,
@@ -876,10 +882,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: roi kedarya (XTWN7PT73U)";
 				INFOPLIST_FILE = StayHeathy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Apps.StayHeathy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "d398f0c2-8fcb-405b-9716-59317e632b72";
 				SWIFT_OBJC_BRIDGING_HEADER = "StayHeathy/Bridging-Header.h";
 				"SWIFT_OPTIMIZATION_LEVEL[arch=*]" = "-Onone";
 			};
@@ -889,10 +897,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: roi kedarya (XTWN7PT73U)";
 				INFOPLIST_FILE = StayHeathy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Apps.StayHeathy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "d398f0c2-8fcb-405b-9716-59317e632b72";
 				SWIFT_OBJC_BRIDGING_HEADER = "StayHeathy/Bridging-Header.h";
 			};
 			name = Release;

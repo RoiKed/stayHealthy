@@ -12,9 +12,24 @@ class sqlCategory:SQLTable {
     var id = ""
     var name = ""
     var image = ""
+    var movie = ""
+    var period = ""
+    var frequncy = ""
+    var center = ""
+    var headline = ""
+    var explanation = ""
+    var note = ""
+    var info1 = ""
+    var info2 = ""
+    var info3 = ""
+    var info4 = ""
+    var info5 = ""
+    var info6 = ""
+    var info7 = ""
+    var info8 = ""
     
     init() {
-        super.init(tableName:"tabel4")
+        super.init(tableName:"table1")
     }
     
     required convenience init(tableName:String) {

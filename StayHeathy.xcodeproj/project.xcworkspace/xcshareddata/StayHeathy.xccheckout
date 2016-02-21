@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>DBAB2B3B-C272-4D37-9A3B-92823F6FC4AB</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3CEFD4BC31B6551B646D333AC617F2B82F338794</key>
+		<string>https://github.com/RoiKed/stayHealthy.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>StayHeathy.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3CEFD4BC31B6551B646D333AC617F2B82F338794</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/RoiKed/stayHealthy.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3CEFD4BC31B6551B646D333AC617F2B82F338794</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3CEFD4BC31B6551B646D333AC617F2B82F338794</string>
+			<key>IDESourceControlWCCName</key>
+			<string>stayHealthy</string>
+		</dict>
+	</array>
+</dict>
+</plist>
