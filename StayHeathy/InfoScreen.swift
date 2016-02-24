@@ -9,7 +9,7 @@
 import UIKit
 import EventKit
 
-class InfoScreen: UIViewController {
+class InfoScreen: UIViewController, UIPopoverPresentationControllerDelegate {
     
     
     @IBOutlet var backView: UIView!
@@ -67,54 +67,23 @@ class InfoScreen: UIViewController {
         return resultString
     }
     
+    @IBAction func reminderButtonTapped(sender: AnyObject) {
+        self.performSegueWithIdentifier("CalenderPickerViewController", sender: self)
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "CalenderPickerViewController") {
             let nextVC = segue.destinationViewController as! CalenderPickerViewController
             nextVC.collectionRow = self.collectionRow
+            let controller = nextVC.popoverPresentationController
+            if (controller != nil) {
+                controller?.delegate = self
+            }
         }
     }
     
-    // Creates an event in the EKEventStore. The method assumes the eventStore is created and
-    // accessible
-//    func createEvent(eventStore: EKEventStore, title: String, startDate: NSDate, endDate: NSDate) {
-//        let event = EKEvent(eventStore: eventStore)
-//        
-//        event.title = title
-//        event.startDate = startDate
-//        event.endDate = endDate
-//        event.calendar = eventStore.defaultCalendarForNewEvents
-//        do {
-//            try eventStore.saveEvent(event, span: .ThisEvent)
-//            
-//            savedEventId = event.eventIdentifier
-//        } catch {
-//            print("Bad things happened")
-//        }
-//    }
-//    
-//    func calculateRemindersDates () {
-//        let startDate = NSDate()
-//        let frequency = collectionRow.frequency
-//        let period = collectionRow.period
-//        if (period == "Y") {
-//        
-//        }
-//    }
-//    
-//    //
-//    @IBAction func reminderButtonTapped(sender: AnyObject) {
-//        let eventStore = EKEventStore()
-//        
-//        let startDate = NSDate()
-//        let endDate = startDate.dateByAddingTimeInterval(60 * 60) // One hour
-//        
-//        if (EKEventStore.authorizationStatusForEntityType(.Event) != EKAuthorizationStatus.Authorized) {
-//            eventStore.requestAccessToEntityType(.Event, completion: {
-//                granted, error in
-//                self.createEvent(eventStore, title: self.collectionRow.name, startDate: startDate, endDate: endDate)
-//            })
-//        } else {
-//            createEvent(eventStore, title: self.collectionRow.name, startDate: startDate, endDate: endDate)
-//        }
-//    }
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
+        return UIModalPresentationStyle.None
+    }
+    
 }

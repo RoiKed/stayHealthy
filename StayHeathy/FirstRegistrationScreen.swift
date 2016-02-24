@@ -33,7 +33,7 @@ class FirstRegistrationScreen: UIViewController ,UITextFieldDelegate {
             self.personDetails = (userDefaults.objectForKey("user_details") as! NSDictionary)
             self.userDetails = NSMutableDictionary(dictionary: personDetails)
         } else {
-            self.userDetails = ["gender":"","age":"גיל","city":"עיר","is_smoking":""]
+            self.userDetails = ["gender":"","age":"","city":"","is_smoking":"","full_name":"","phone_number":"","medical_center":""]
         }
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: Selector("dismissKeyboard")))
     }
@@ -45,6 +45,8 @@ class FirstRegistrationScreen: UIViewController ,UITextFieldDelegate {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        self.ageTextField.placeholder = "גיל"
+        self.cityTextField.placeholder = "עיר"
         let userDefaults = NSUserDefaults.standardUserDefaults()
         if (userDefaults.objectForKey("user_details") != nil) {
             self.personDetails = (userDefaults.objectForKey("user_details") as! NSDictionary)
@@ -65,8 +67,8 @@ class FirstRegistrationScreen: UIViewController ,UITextFieldDelegate {
     
     func updateAllFields() {
         if (self.userDetails.objectForKey("gender") != nil) {
-            self.maleButton.selected = (self.userDetails.objectForKey("gender") as! NSString).isEqualToString("M")
-            self.femaleButton.selected = !self.maleButton.selected
+            self.maleButton.selected = (self.userDetails.objectForKey("gender") as! NSString).caseInsensitiveCompare("M") == .OrderedSame
+            self.femaleButton.selected = (self.userDetails.objectForKey("gender") as! NSString).caseInsensitiveCompare("F") == .OrderedSame
         }
         if (self.userDetails.objectForKey("age") != nil) {
             self.ageTextField.text = String(self.userDetails.objectForKey("age")!)
@@ -76,7 +78,7 @@ class FirstRegistrationScreen: UIViewController ,UITextFieldDelegate {
         }
         if (self.userDetails.objectForKey("is_smoking") != nil) {
             self.smokingButton.selected = (self.userDetails.objectForKey("is_smoking") as! NSString).boolValue
-            self.nonSmokingButton.selected = !smokingButton.selected
+            self.nonSmokingButton.selected = (self.userDetails.objectForKey("is_smoking") as! NSString).boolValue
         }
     }
     
@@ -116,22 +118,66 @@ class FirstRegistrationScreen: UIViewController ,UITextFieldDelegate {
     
     @IBAction func DoneButtonTapped(sender: AnyObject) {
         var canSegue = true
-        for key in self.userDetails.allKeys {
-            if (self.userDetails.objectForKey(key) == nil ||  self.userDetails.objectForKey(key) as! NSString == "") {
-                canSegue = false
-                let alert = UIAlertController(title: "", message:" אנא מלא את השדות הבאים:", preferredStyle: UIAlertControllerStyle.Alert)
-                alert.addAction(UIAlertAction(title: "אישור", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction!) in
-                    alert.dismissViewControllerAnimated(true, completion: nil)
-                }))
-                presentViewController(alert, animated: true, completion: nil)
-            }
+        let missingKey = self.checkMissingFields()
+        //we have a missing key
+        if (missingKey != nil) {
+            canSegue = false
+            let alert = UIAlertController(title: "", message: " אנא מלא את השדות הבאים: " + (missingKey as String!), preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "אישור", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction!) in
+                alert.dismissViewControllerAnimated(true, completion: nil)
+            }))
+            presentViewController(alert, animated: true, completion: nil)
         }
+//        for key in self.userDetails.allKeys {
+//            if (self.userDetails.objectForKey(key) == nil ||  self.userDetails.objectForKey(key) as! NSString == "") {
+//                canSegue = false
+//                let alert = UIAlertController(title: "", message: " אנא מלא את השדות הבאים:" + (key as! String), preferredStyle: UIAlertControllerStyle.Alert)
+//                alert.addAction(UIAlertAction(title: "אישור", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction!) in
+//                    alert.dismissViewControllerAnimated(true, completion: nil)
+//                }))
+//                presentViewController(alert, animated: true, completion: nil)
+//            }
+//        }
         if canSegue {
             //segue to next screen
             self.registerDetails()
             self.performSegueWithIdentifier("segueToSecondReg", sender: nil)
         }
 
+    }
+    
+    func checkMissingFields() ->String? {
+        var missingKey : String? = nil
+        if (ageTextField.text == nil || ageTextField.text == "") {
+            if (missingKey == nil) {
+                missingKey = "גיל"
+            } else {
+                missingKey! += ", גיל"
+            }
+        }
+        if (cityTextField.text == nil || cityTextField.text == "") {
+            if (missingKey == nil) {
+                missingKey = "עיר"
+            } else {
+                missingKey! += ", עיר"
+            }
+        }
+        if (maleButton.selected == false && femaleButton.selected == false) {
+            if (missingKey == nil) {
+                missingKey = "מגדר"
+            } else {
+                missingKey! += ", מגדר"
+            }
+        }
+        if (smokingButton.selected == false && nonSmokingButton.selected == false) {
+            if (missingKey == nil) {
+                missingKey = "מעשן"
+            } else {
+                missingKey! += ", מעשן"
+            }
+        }
+
+        return missingKey
     }
     
     func registerDetails() {
@@ -166,7 +212,7 @@ class FirstRegistrationScreen: UIViewController ,UITextFieldDelegate {
     
     func textFieldDidEndEditing(textField: UITextField) {
         scrollView.setContentOffset(CGPointMake(0, 0), animated: true)
-        if (textField.text == "") {
+        if (textField.text == "" && textFieldPreviousText != nil) {
             textField.text = textFieldPreviousText as String
         } else {
             let textFieldTag = textField.tag

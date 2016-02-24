@@ -10,7 +10,7 @@ import UIKit
 
 class SecondRegistrationScreen: UIViewController ,UITextFieldDelegate {
     
-    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var phoneNumberTextField: UITextField!
     @IBOutlet weak var fullNameTextField: UITextField!
     
     @IBOutlet weak var scrollView: UIScrollView!
@@ -36,7 +36,9 @@ class SecondRegistrationScreen: UIViewController ,UITextFieldDelegate {
         if (userDefaults.objectForKey("user_details") != nil) {
             self.personDetails = (userDefaults.objectForKey("user_details") as! NSDictionary)
             self.userDetails = NSMutableDictionary(dictionary: personDetails)
-        } 
+        }
+        self.fullNameTextField.placeholder = "שם מלא"
+        self.phoneNumberTextField.placeholder = "מספר טלפון"
         // update all fields for user details
         self.updateAllFields()
     }
@@ -52,15 +54,15 @@ class SecondRegistrationScreen: UIViewController ,UITextFieldDelegate {
     
     func dismissKeyboard () {
         self.fullNameTextField.resignFirstResponder()
-        self.emailTextField.resignFirstResponder()
+        self.phoneNumberTextField.resignFirstResponder()
     }
     
     func updateAllFields() {
         if (self.userDetails.objectForKey("full_name") != nil) {
             self.fullNameTextField.text = String(self.userDetails.objectForKey("full_name")!)
         }
-        if (self.userDetails.objectForKey("email") != nil) {
-            self.emailTextField.text = String(self.userDetails.objectForKey("email")!)
+        if (self.userDetails.objectForKey("phone_number") != nil) {
+            self.phoneNumberTextField.text = String(self.userDetails.objectForKey("phone_number")!)
         }
         if (self.userDetails.objectForKey("medical_center") != nil) {
             self.unselectAllMedicalCenterButtons()
@@ -75,7 +77,7 @@ class SecondRegistrationScreen: UIViewController ,UITextFieldDelegate {
             case "meuhedet":
                 self.meuhedetButton.selected = true
             default:
-                print("did not mtach medicalCenter with person's value")
+                print("did not match medicalCenter with dictionary value")
                 break
             }
         }
@@ -114,14 +116,15 @@ class SecondRegistrationScreen: UIViewController ,UITextFieldDelegate {
     
     @IBAction func DoneButtonTapped(sender: AnyObject) {
         var canSegue = true
-        for key in self.personDetails.allKeys {
-            if (self.personDetails.objectForKey(key) == nil) {
-                canSegue = false
-                let alert = UIAlertController(title: "", message:" אנא מלא את השדות הבאים:", preferredStyle: UIAlertControllerStyle.Alert)
-                alert.addAction(UIAlertAction(title: "אישור", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction!) in
-                    alert.dismissViewControllerAnimated(true, completion: nil)
-                }))
-            }
+        let missingKey = self.checkMissingFields()
+        //we have a missing key
+        if (missingKey != nil) {
+            canSegue = false
+            let alert = UIAlertController(title: "", message: " אנא מלא את השדות הבאים: " + (missingKey as String!), preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "אישור", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction!) in
+                alert.dismissViewControllerAnimated(true, completion: nil)
+            }))
+            presentViewController(alert, animated: true, completion: nil)
         }
         if canSegue {
             //segue to next screen
@@ -136,6 +139,32 @@ class SecondRegistrationScreen: UIViewController ,UITextFieldDelegate {
         }
 
         
+    }
+    
+    func checkMissingFields() ->String? {
+        var missingKey : String? = nil
+        if (fullNameTextField.text == nil || fullNameTextField.text == "") {
+            if (missingKey == nil) {
+                missingKey = "שם-מלא"
+            } else {
+                missingKey! +=  ", שם-מלא"
+            }
+        }
+        if (phoneNumberTextField.text == nil || phoneNumberTextField.text == "") {
+            if (missingKey == nil) {
+                missingKey = "מספר-טלפון"
+            } else {
+                missingKey! += ", מספר-טלפון"
+            }
+        }
+        if (clalitButton.selected == false && leumitButton.selected == false && macabiButton.selected == false && meuhedetButton.selected == false) {
+            if (missingKey == nil) {
+                missingKey = "קופת-חולים"
+            } else {
+                missingKey! += ", קופת-חולים"
+            }
+        }
+        return missingKey
     }
         
     // MARK: textField Delegate
@@ -163,7 +192,7 @@ class SecondRegistrationScreen: UIViewController ,UITextFieldDelegate {
     
     func textFieldDidEndEditing(textField: UITextField) {
         scrollView.setContentOffset(CGPointMake(0, 0), animated: true)
-        if (textField.text == "") {
+        if (textField.text == "" && textFieldPreviousText != nil) {
             textField.text = textFieldPreviousText as String
         } else {
             let textFieldTag = textField.tag
@@ -173,7 +202,7 @@ class SecondRegistrationScreen: UIViewController ,UITextFieldDelegate {
                 self.userDetails .setValue(fullNameTextField.text!, forKey: "full_name")
             //phone number
             case 3:
-                self.userDetails .setValue(emailTextField.text!, forKey: "email")
+                self.userDetails .setValue(phoneNumberTextField.text!, forKey: "phone_number")
             default:
                 print("no uiTag found for TextField")
             }

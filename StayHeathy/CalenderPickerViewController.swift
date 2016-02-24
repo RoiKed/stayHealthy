@@ -19,8 +19,6 @@ class CalenderPickerViewController: UIViewController {
     var lastExameDate : NSDate!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.clearColor()
-        self.backView.backgroundColor = UIColor.clearColor()
         self.datePicker.addTarget(self, action: "updateDate:", forControlEvents: UIControlEvents.ValueChanged)
         self.lastExameDate = NSDate()
     }
