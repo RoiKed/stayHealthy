@@ -88,6 +88,7 @@ class InfoScreen: UIViewController, UIPopoverPresentationControllerDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "CalenderPickerViewController") {
             let nextVC = segue.destinationViewController as! CalenderPickerViewController
+            
             nextVC.collectionRow = self.collectionRow
             let controller = nextVC.popoverPresentationController
             if (controller != nil) {
@@ -95,6 +96,28 @@ class InfoScreen: UIViewController, UIPopoverPresentationControllerDelegate {
             }
         }
     }
+    
+// @IBAction func popoverWithoutBarButton(sender: AnyObject?) {
+//    
+//    // grab the view controller we want to show
+//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//    UIViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"Pop"];
+//    
+//    // present the controller
+//    // on iPad, this will be a Popover
+//    // on iPhone, this will be an action sheet
+//    controller.modalPresentationStyle = UIModalPresentationPopover;
+//    [self presentViewController:controller animated:YES completion:nil];
+//    
+//    // configure the Popover presentation controller
+//    UIPopoverPresentationController *popController = [controller popoverPresentationController];
+//    popController.permittedArrowDirections = UIPopoverArrowDirectionUp;
+//    popController.delegate = self;
+//    
+//    // in case we don't have a bar button as reference
+//    popController.sourceView = self.view;
+//    popController.sourceRect = CGRectMake(30, 50, 10, 10);
+//    }
     
     func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
         return UIModalPresentationStyle.None

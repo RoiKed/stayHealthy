@@ -81,6 +81,8 @@ class MenuScreen: UIViewController, UICollectionViewDelegate, UICollectionViewDa
         let collectionRow = dataToPresent[indexPath.row]
         cell.title.text = collectionRow.name
         let imageName = collectionRow.image
+        cell.frame.size.width = collectionView.frame.width
+        cell.frame.origin.x = 0.0
         cell.uniqueId = collectionRow.id
         cell.titleImage.image = UIImage(named: imageName);
         return cell
