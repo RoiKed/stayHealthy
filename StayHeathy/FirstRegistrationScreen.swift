@@ -28,6 +28,7 @@ class FirstRegistrationScreen: UIViewController ,UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.configureNavBar()
         let userDefaults = NSUserDefaults.standardUserDefaults()
         if (userDefaults.objectForKey("user_details") != nil) {
             self.personDetails = (userDefaults.objectForKey("user_details") as! NSDictionary)
@@ -36,6 +37,17 @@ class FirstRegistrationScreen: UIViewController ,UITextFieldDelegate {
             self.userDetails = ["gender":"","age":"","city":"","is_smoking":"","full_name":"","phone_number":"","medical_center":""]
         }
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: Selector("dismissKeyboard")))
+    }
+    
+    func configureNavBar() {
+        let navBar = self.navigationController?.navigationBar
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: navBar!.frame.width, height: navBar!.frame.height))
+        imageView.contentMode = .ScaleAspectFit
+        let titleImage = UIImage(named: "topbartitle")
+        let backgraundImage = UIImage(named: "topbarbg")
+        imageView.image = titleImage
+        navBar?.setBackgroundImage(backgraundImage, forBarMetrics: UIBarMetrics.Default)
+        navigationItem.titleView = imageView
     }
     
     func dismissKeyboard () {

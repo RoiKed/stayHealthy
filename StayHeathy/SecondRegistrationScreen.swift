@@ -28,7 +28,20 @@ class SecondRegistrationScreen: UIViewController ,UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: Selector("dismissKeyboard")))
+        self.configureNavBar() 
     }
+    
+    func configureNavBar() {
+        let navBar = self.navigationController?.navigationBar
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: navBar!.frame.width, height: navBar!.frame.height))
+        imageView.contentMode = .ScaleAspectFit
+        let titleImage = UIImage(named: "topbartitle")
+        let backgraundImage = UIImage(named: "topbarbg")
+        imageView.image = titleImage
+        navBar?.setBackgroundImage(backgraundImage, forBarMetrics: UIBarMetrics.Default)
+        navigationItem.titleView = imageView
+    }
+
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -129,6 +142,7 @@ class SecondRegistrationScreen: UIViewController ,UITextFieldDelegate {
         if canSegue {
             //segue to next screen
             self.registerDetails()
+            self.performSegueWithIdentifier("segueToMenu", sender: nil)
         }
     }
     
@@ -181,7 +195,7 @@ class SecondRegistrationScreen: UIViewController ,UITextFieldDelegate {
             scrollView.setContentOffset(CGPointMake(0, abs(distanceToKeyBoard)+30), animated: true)
         }
         if (textField.tag == 3) {
-            textField.keyboardType = UIKeyboardType.NumbersAndPunctuation
+            textField.keyboardType = UIKeyboardType.NumberPad
         }
         //clear the old text
         if (textField.text != "") {

@@ -40,6 +40,23 @@ class MenuScreen: UIViewController, UICollectionViewDelegate, UICollectionViewDa
         }
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.configureNavBar()
+    }
+    
+    func configureNavBar() {
+        let navBar = self.navigationController?.navigationBar
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: navBar!.frame.width, height: navBar!.frame.height))
+        imageView.contentMode = .ScaleAspectFit
+        let titleImage = UIImage(named: "topbartitle")
+        let backgraundImage = UIImage(named: "topbarbg")
+        imageView.image = titleImage
+        navBar?.setBackgroundImage(backgraundImage, forBarMetrics: UIBarMetrics.Default)
+        navigationItem.titleView = imageView
+    }
+
+    
     // MARK: UICollectionViewDelegate
     func collectionView(collectionView: UICollectionView, shouldSelectItemAtIndexPath indexPath: NSIndexPath) -> Bool {
         let selectedCell:SHViewCell = collectionView.cellForItemAtIndexPath(indexPath) as! SHViewCell

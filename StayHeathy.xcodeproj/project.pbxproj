@@ -116,6 +116,7 @@
 		236206B11C651ACD00714B70 /* SHViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236206B01C651ACD00714B70 /* SHViewCell.swift */; };
 		236206BB1C65F5F300714B70 /* InfoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236206BA1C65F5F300714B70 /* InfoScreen.swift */; };
 		23769EFC1C5BFF3A00F92DA2 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 23769EFB1C5BFF3A00F92DA2 /* libsqlite3.0.tbd */; };
+		238586CF1C7DB76A003CDC26 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238586CE1C7DB76A003CDC26 /* LaunchScreen.swift */; };
 		239089311C41115B00CC7018 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239089301C41115B00CC7018 /* AppDelegate.swift */; };
 		239089361C41115B00CC7018 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 239089341C41115B00CC7018 /* Main.storyboard */; };
 		239089381C41115B00CC7018 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 239089371C41115B00CC7018 /* Assets.xcassets */; };
@@ -253,6 +254,7 @@
 		236206B01C651ACD00714B70 /* SHViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHViewCell.swift; sourceTree = "<group>"; };
 		236206BA1C65F5F300714B70 /* InfoScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoScreen.swift; sourceTree = "<group>"; };
 		23769EFB1C5BFF3A00F92DA2 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		238586CE1C7DB76A003CDC26 /* LaunchScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
 		2390892D1C41115B00CC7018 /* StayHeathy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StayHeathy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		239089301C41115B00CC7018 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		239089351C41115B00CC7018 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -466,6 +468,7 @@
 				236206A61C6409B600714B70 /* Bridging-Header.h */,
 				239089301C41115B00CC7018 /* AppDelegate.swift */,
 				239089341C41115B00CC7018 /* Main.storyboard */,
+				238586CE1C7DB76A003CDC26 /* LaunchScreen.swift */,
 				2301F4861C5828170028F673 /* FirstRegistrationScreen.swift */,
 				23E271571C5D1CDF00B4E9E4 /* SecondRegistrationScreen.swift */,
 				236206BA1C65F5F300714B70 /* InfoScreen.swift */,
@@ -734,6 +737,7 @@
 				236206A51C6406EC00714B70 /* String-Extras.swift in Sources */,
 				236206AF1C6511C000714B70 /* sqlCategory.swift in Sources */,
 				239089311C41115B00CC7018 /* AppDelegate.swift in Sources */,
+				238586CF1C7DB76A003CDC26 /* LaunchScreen.swift in Sources */,
 				236206B11C651ACD00714B70 /* SHViewCell.swift in Sources */,
 				2301F4871C5828170028F673 /* FirstRegistrationScreen.swift in Sources */,
 				236206A31C6406EC00714B70 /* SQLiteDB.swift in Sources */,
@@ -880,6 +884,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: roi kedarya (XTWN7PT73U)";
 				INFOPLIST_FILE = StayHeathy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Apps.StayHeathy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -895,6 +900,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: roi kedarya (XTWN7PT73U)";
 				INFOPLIST_FILE = StayHeathy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Apps.StayHeathy;
 				PRODUCT_NAME = "$(TARGET_NAME)";

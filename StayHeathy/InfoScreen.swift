@@ -22,8 +22,22 @@ class InfoScreen: UIViewController, UIPopoverPresentationControllerDelegate {
     var savedEventId : String = ""
     var dataToPresent = [sqlCategory]()
     var collectionRow : sqlCategory!
+    
+    func configureNavBar() {
+        let navBar = self.navigationController?.navigationBar
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: navBar!.frame.width, height: navBar!.frame.height))
+        imageView.contentMode = .ScaleAspectFit
+        let titleImage = UIImage(named: "topbartitle")
+        let backgraundImage = UIImage(named: "topbarbg")
+        imageView.image = titleImage
+        navBar?.setBackgroundImage(backgraundImage, forBarMetrics: UIBarMetrics.Default)
+        navigationItem.titleView = imageView
+    }
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.configureNavBar()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -46,7 +60,7 @@ class InfoScreen: UIViewController, UIPopoverPresentationControllerDelegate {
         let movieURLString = (collectionRow.movie as String)
         let movieString = "https://www.youtube.com/embed/" + self.getMovieIdFromStringUrl(movieURLString)
         self.webViewPlayer.allowsInlineMediaPlayback = true
-        let embededString = "<iframe width=\"\(self.webViewPlayer.frame.width - 16)\" height=\"\(self.webViewPlayer.frame.height - 4)\" src=\"\(movieString)?&playsinline=1\" frameborder=\"0\" allowfullscreen></iframe>"
+        let embededString = "<iframe width=\"\(self.view.frame.width - 16)\" height=\"\(self.webViewPlayer.frame.height - 4)\" src=\"\(movieString)?&playsinline=1\" frameborder=\"0\" allowfullscreen></iframe>"
         self.webViewPlayer.loadHTMLString(embededString, baseURL: nil)
     }
     
