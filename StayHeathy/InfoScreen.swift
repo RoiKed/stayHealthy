@@ -47,13 +47,13 @@ class InfoScreen: UIViewController, UIPopoverPresentationControllerDelegate {
         self.collectionRow = dataToPresent[0]
         self.titleLabel.text = self.verifyString(collectionRow.name)
         self.infoLabel.text =
-            self.verifyString(collectionRow.info1) + "\n" +
-            self.verifyString(collectionRow.info2) + "\n" +
-            self.verifyString(collectionRow.info3) + "\n" +
-            self.verifyString(collectionRow.info4) + "\n" +
-            self.verifyString(collectionRow.info5) + "\n" +
-            self.verifyString(collectionRow.info6) + "\n" +
-            self.verifyString(collectionRow.info7) + "\n" +
+            self.updateLabelWithLineSpacing(collectionRow.info1) +
+            self.updateLabelWithLineSpacing(collectionRow.info2) +
+            self.updateLabelWithLineSpacing(collectionRow.info3) +
+            self.updateLabelWithLineSpacing(collectionRow.info4) +
+            self.updateLabelWithLineSpacing(collectionRow.info5) +
+            self.updateLabelWithLineSpacing(collectionRow.info6) +
+            self.updateLabelWithLineSpacing(collectionRow.info7) +
             self.verifyString(collectionRow.info8)
         
         self.descriptionLabel.text = self.verifyString(collectionRow.note)
@@ -73,6 +73,14 @@ class InfoScreen: UIViewController, UIPopoverPresentationControllerDelegate {
         return movieId
     }
     
+    func updateLabelWithLineSpacing(infoString:String) -> String {
+        var upadtedText = self.verifyString(infoString)
+        if (upadtedText != "") {
+            upadtedText = upadtedText + "\n"
+        }
+        return upadtedText
+    }
+    
     func verifyString(string:String) -> String {
         var resultString = string
         if (resultString == "null") {
@@ -81,18 +89,22 @@ class InfoScreen: UIViewController, UIPopoverPresentationControllerDelegate {
         return resultString
     }
     
+    
+    
     @IBAction func reminderButtonTapped(sender: AnyObject) {
-        self.performSegueWithIdentifier("CalenderPickerViewController", sender: self)
+        self.performSegueWithIdentifier("CalenderPickerViewControllerSegue", sender: self)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "CalenderPickerViewController") {
+        if (segue.identifier == "CalenderPickerViewControllerSegue") {
             let nextVC = segue.destinationViewController as! CalenderPickerViewController
-            
             nextVC.collectionRow = self.collectionRow
-            let controller = nextVC.popoverPresentationController
-            if (controller != nil) {
-                controller?.delegate = self
+            //nextVC.view.frame = self.view.frame
+            nextVC.preferredContentSize = self.backView.frame.size
+            let popover = nextVC.popoverPresentationController
+            if (popover != nil) {
+                popover?.delegate = self
+                popover?.sourceRect = CGRectMake(0,0,0,0)
             }
         }
     }
